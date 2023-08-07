@@ -13,15 +13,9 @@
     <meta name="description" content="This is just a practice document" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        console.log('document loaded')
-
-        $(".top-button:nth-child(2)").click(function(){
-          console.log('button pressed')
-        })
-      })
-    </script>
+    <script src="my_functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <title>Practice</title>
    
@@ -32,12 +26,13 @@
       <div id="page-header">
         <div id="top-button-div">
           <button class="top-button">Order Online</button>
-          <button class="top-button">Reserve Table</button>
+         <button  class="top-button"> Reserve Table</button>
           <button class="top-button">Contact </button>
         </div>
         <h1>The Best Restaurant</h1>
         <h2 >Where the food is amazing</h2>
       </div>
+    </header>
       <div id="page-body">
 
       
@@ -58,7 +53,25 @@
       <div>
         <h2>Gallery</h1>
       </div>
+
+      <div id="reserve-modal" >
+        <div id="reserve-modal-div">
+
+       
+        <div id="modal-header">Reserve Table</div>
+        <label for="name-input" id="reserve-label">Name</label>
+        <input id="name-input" type="text"/>
+        <label for="party-input" id="reserve-label">Number of people</label>
+        <input id="party-input" type="text"/>
+        <label for="time-input" id="reserve-label">Time</label>
+        <input id="time-input" type="text"/>
+        <label for="special-req-input" id="reserve-label">Any special requests</label>
+        <input  id="special-req-input"type="text"/>
+        <button id="close-modal-butt">Close Modal</button>
+      </div>
     </div>
-    </header>
+    </div>
+    
+   
   </body>
 </html>
