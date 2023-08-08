@@ -1,6 +1,21 @@
 $(document).ready(function () {
   console.log("document loaded");
 
+  $("#dog-button").click(function () {
+    console.log("dog button pressed");
+    $.ajax({
+      url: "https://jsonplaceholder.typicode.com/posts",
+      method: "GET",
+      dataType: "json",
+      success: function (data) {
+        console.log(data);
+      },
+      error: function () {
+        console.log(`error with ajax`);
+      },
+    });
+  });
+
   $(".top-button").on({
     mouseenter: function () {
       $(this).css({
